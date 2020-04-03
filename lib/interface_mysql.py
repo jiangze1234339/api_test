@@ -1,5 +1,6 @@
 import pymysql
 import sys
+
 sys.path.append('..')
 # from config.config import *
 from config.config import *
@@ -45,7 +46,13 @@ class Mysql(object):
         result = self.cur.fetchall()
         return result
 
-    # def change(self, price, name):
+    def select_test(self, sql):
+        self.cur.execute(sql)
+        result = self.cur.fetchall()
+        return result
+        # return result[?]  // 到时候想要的值在行中的第几个位置，？就写几，得到他具体的值
+        # def change(self, price, name):
+
     #     self.exec("update user set salary = '{}' where name='{}'".format(price, name))
 
     def check_user(self, name):

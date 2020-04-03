@@ -5,6 +5,7 @@ import sys
 from lib.HTMLTestReportCN import HTMLTestRunner
 from config.config import *
 from lib.mix_email import send_email
+from test.case.user import test_user_available
 from test.suite.test_suites import get_suite
 
 
@@ -142,12 +143,12 @@ def main():
         run_all()
 
 
+suite = makesuite_by_testlist(testlist_file)
+unittest.TextTestRunner().run(suite)
 # if __name__ == '__main__':
 #     main()  # 调用main()
 
-print(discover())
 
-# run(discover())
 # return_fails()
 
 
@@ -158,4 +159,3 @@ print(discover())
 # def run_all2(suite):
 #     runner = unittest.TextTestRunner()
 #     runner.run(suite)
-

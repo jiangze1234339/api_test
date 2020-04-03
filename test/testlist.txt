@@ -1,3 +1,5 @@
 test_login
-test_reg
+#test_reg
 # test_reg_exist #注释后不执行
+#test_get_information
+test_updata
