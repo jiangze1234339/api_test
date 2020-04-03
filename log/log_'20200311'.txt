@@ -1,0 +1,48 @@
+[2020-03-11 15:39:05] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-11 15:39:05] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-11 15:39:05] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-11 15:39:05] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c HTTP/1.1" 200 115
+[2020-03-11 15:40:02] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-11 15:40:02] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-11 15:40:02] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-11 15:40:02] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c HTTP/1.1" 200 115
+[2020-03-11 15:46:11] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-11 15:46:11] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-11 15:46:11] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-11 15:46:11] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c HTTP/1.1" 200 115
+[2020-03-11 15:47:15] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-11 15:47:15] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-11 15:47:15] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-11 15:47:15] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c HTTP/1.1" 200 115
+[2020-03-11 15:47:15] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_updata
+[2020-03-11 15:47:15] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c
+[2020-03-11 15:47:15] INFO [log_case_info: case_log.py, 20] 参数为：{
+    "name": "乐乐",
+    "password": "123456"
+}
+[2020-03-11 15:47:15] INFO [log_case_info: case_log.py, 21] 预期结果：{"code": "100000", "data": {"name": "\u4e50\u4e50", "passwod": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "\u6210\u529f"}
+[2020-03-11 15:47:15] INFO [log_case_info: case_log.py, 22] 结果：{"code": "100000", "data": {"name": "乐乐", "passwod": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "成功"}
+[2020-03-11 15:53:10] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-11 15:53:11] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-11 15:53:11] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-11 15:53:11] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c HTTP/1.1" 200 115
+[2020-03-11 15:53:11] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_updata
+[2020-03-11 15:53:11] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c
+[2020-03-11 15:53:11] INFO [log_case_info: case_log.py, 20] 参数为：{
+    "name": "乐乐",
+    "password": "123456"
+}
+[2020-03-11 15:53:11] INFO [log_case_info: case_log.py, 21] 预期结果：{"code": "100000", "data": {"name": "\u4e50\u4e50", "passwod": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "\u6210\u529f"}
+[2020-03-11 15:53:11] INFO [log_case_info: case_log.py, 22] 结果：{"code": "100000", "data": {"name": "乐乐", "passwod": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "成功"}
+[2020-03-11 15:53:36] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-11 15:53:36] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-11 15:53:36] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-11 15:53:36] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c HTTP/1.1" 200 115
+[2020-03-11 15:53:36] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_updata
+[2020-03-11 15:53:36] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c
+[2020-03-11 15:53:36] INFO [log_case_info: case_log.py, 20] 参数为：{
+    "name": "乐乐",
+    "password": "123456"
+}
+[2020-03-11 15:53:36] INFO [log_case_info: case_log.py, 21] 预期结果：{"code": "100000", "data": {"name": "\u4e50\u4e50", "passwod": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "\u6210\u529f"}
+[2020-03-11 15:53:36] INFO [log_case_info: case_log.py, 22] 结果：{"code": "100000", "data": {"name": "乐乐", "passwod": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "成功"}

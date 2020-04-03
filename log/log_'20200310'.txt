@@ -1,0 +1,737 @@
+[2020-03-10 14:10:24] INFO [run: run.py, 16] ==============测试开始================
+[2020-03-10 14:10:24] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 14:10:24] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_login_normal
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/login/
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 20] 参数为：{"name": "张三","password":"123456"}
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 21] 预期结果：<h1>登录成功</h1>
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 22] 结果：<h1>登录成功</h1>
+[2020-03-10 14:10:24] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 14:10:24] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 42
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_login_password_wrong
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/login/
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 20] 参数为： {"name": "张三","password":"1234567"}
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 21] 预期结果：<h1>失败，用户名或密码错误</h1>
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 22] 结果：<h1>失败，用户名或密码错误</h1>
+[2020-03-10 14:10:24] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 14:10:24] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "GET /api/user/logout/ HTTP/1.1" 200 27
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_logout
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/logout/
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 20] 参数为：
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 21] 预期结果：退出登录成功
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 22] 结果：<h1>退出登录成功</h1>
+[2020-03-10 14:10:24] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 14:10:24] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/reg/ HTTP/1.1" 200 152
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_reg_normal
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/reg/
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 20] 参数为：{"name": "马腾","password":"123456"}
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 21] 预期结果：{"code": "100000", "data": {"name": "\u9a6c\u817e", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "\u6210\u529f"}
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 22] 结果：{"code": "100001", "data": {"name": "马腾", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "失败，用户已存在"}
+[2020-03-10 14:10:24] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 14:10:24] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/reg/ HTTP/1.1" 200 152
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_reg_exist
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/reg/
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 20] 参数为：{"name": "马六","password":"123456"}
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 21] 预期结果：{"code": "100001", "data": {"name": "\u9a6c\u516d", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "\u5931\u8d25\uff0c\u7528\u6237\u5df2\u5b58\u5728"}
+[2020-03-10 14:10:24] INFO [log_case_info: case_log.py, 22] 结果：{"code": "100001", "data": {"name": "马六", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "失败，用户已存在"}
+[2020-03-10 14:10:24] INFO [run: run.py, 24] ================================== 测试结束 ==================================
+[2020-03-10 14:45:38] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 14:45:38] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "GET /api/user/getUserList/?%7B%7D HTTP/1.1" 200 30
+[2020-03-10 14:45:38] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_avaliable
+[2020-03-10 14:45:38] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/getUserList/
+[2020-03-10 14:45:38] INFO [log_case_info: case_log.py, 20] 参数为：{}
+[2020-03-10 14:45:38] INFO [log_case_info: case_log.py, 21] 预期结果：张三
+[2020-03-10 14:45:38] INFO [log_case_info: case_log.py, 22] 结果：<h1>失败，尚未登录</h1>
+[2020-03-10 14:46:02] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 14:46:02] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "GET /api/user/getUserList/?%7B%7D HTTP/1.1" 200 30
+[2020-03-10 14:46:02] INFO [log_case_info: case_log.py, 18] 测试用例：test_failure_avaliable
+[2020-03-10 14:46:02] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/getUserList/
+[2020-03-10 14:46:02] INFO [log_case_info: case_log.py, 20] 参数为：{}
+[2020-03-10 14:46:02] INFO [log_case_info: case_log.py, 21] 预期结果：失败，尚未登录
+[2020-03-10 14:46:02] INFO [log_case_info: case_log.py, 22] 结果：<h1>失败，尚未登录</h1>
+[2020-03-10 15:00:25] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:00:25] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "GET /api/user/getUserList/?%7B%7D HTTP/1.1" 200 30
+[2020-03-10 15:00:25] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_avaliable
+[2020-03-10 15:00:25] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/getUserList/
+[2020-03-10 15:00:25] INFO [log_case_info: case_log.py, 20] 参数为：{}
+[2020-03-10 15:00:25] INFO [log_case_info: case_log.py, 21] 预期结果：张三
+[2020-03-10 15:00:25] INFO [log_case_info: case_log.py, 22] 结果：<h1>失败，尚未登录</h1>
+[2020-03-10 15:00:25] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:00:25] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-10 15:00:25] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_login_normal
+[2020-03-10 15:00:25] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/login/
+[2020-03-10 15:00:25] INFO [log_case_info: case_log.py, 20] 参数为：{"name": "张三","password":"123456"}
+[2020-03-10 15:00:25] INFO [log_case_info: case_log.py, 21] 预期结果：<h1>登录成功</h1>
+[2020-03-10 15:00:25] INFO [log_case_info: case_log.py, 22] 结果：<h1>登录成功</h1>
+[2020-03-10 15:13:16] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:13:16] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-10 15:13:16] DEBUG [_get_conn: connectionpool.py, 266] Resetting dropped connection: 115.28.108.130
+[2020-03-10 15:13:16] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "GET /api/user/getUserList/?%7B%7D HTTP/1.1" 200 15495
+[2020-03-10 15:13:16] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_avaliable
+[2020-03-10 15:13:16] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/getUserList/
+[2020-03-10 15:13:16] INFO [log_case_info: case_log.py, 20] 参数为：{}
+[2020-03-10 15:13:16] INFO [log_case_info: case_log.py, 21] 预期结果：张三
+[2020-03-10 15:13:16] INFO [log_case_info: case_log.py, 22] 结果：
+            <html><body>
+            <h1>用户列表</h1>
+            <table border=1>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>用户名</th>
+                        <th>密码</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                <tr>
+                <td>98333</td>
+                <td>乐乐</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123456</td>
+                <td>哈哈和</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321336</td>
+                <td>张三</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321337</td>
+                <td>张三</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321338</td>
+                <td>登录</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321343</td>
+                <td>张嘎</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>90</td>
+                <td>张三</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>1231</td>
+                <td>wangsitu</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>2223</td>
+                <td>wangsitu</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>888</td>
+                <td>wangsitu</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321344</td>
+                <td>wangsitu</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321345</td>
+                <td>wangsitu</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321346</td>
+                <td>wangsitu</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>1312</td>
+                <td>22</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321347</td>
+                <td>第二个</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321348</td>
+                <td>wqe</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321349</td>
+                <td>lily</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321410</td>
+                <td>33311s</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321351</td>
+                <td>刘儿</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321352</td>
+                <td>李四</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321353</td>
+                <td>蔡徐坤</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321354</td>
+                <td>梅长苏</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321355</td>
+                <td>宫羽</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321356</td>
+                <td>宫羽1</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321357</td>
+                <td>宫羽4</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321358</td>
+                <td>宫羽5</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321359</td>
+                <td>宫羽6</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321360</td>
+                <td>宫羽7</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321361</td>
+                <td>宫羽8</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321362</td>
+                <td>哈哈</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321363</td>
+                <td>范冰冰</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321364</td>
+                <td>小小</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321365</td>
+                <td>knfing</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321366</td>
+                <td>张三三</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321367</td>
+                <td>小0小</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321368</td>
+                <td>小045小</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321369</td>
+                <td>全人类</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321370</td>
+                <td>全人</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321371</td>
+                <td>全想人</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321372</td>
+                <td>mumu</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321373</td>
+                <td>李小六</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321374</td>
+                <td>张三四</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321375</td>
+                <td>张三九</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321376</td>
+                <td>韩梅梅0620</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321377</td>
+                <td>张三十</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321378</td>
+                <td>张三78193</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321379</td>
+                <td>李小四</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321380</td>
+                <td>王小五</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321381</td>
+                <td>王五</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321382</td>
+                <td>李冰冰</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321383</td>
+                <td>陈冰冰</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321384</td>
+                <td>王麻子2</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321385</td>
+                <td>zhangsan</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321386</td>
+                <td>张三山</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>891236</td>
+                <td>张三</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321387</td>
+                <td>范冰冰11</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321388</td>
+                <td>{{name}}</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321389</td>
+                <td>武汉加油</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321390</td>
+                <td>中国</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321391</td>
+                <td>中国加油</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321392</td>
+                <td>ggg</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321393</td>
+                <td>dsfsdafsdagdsagsdafsda</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321394</td>
+                <td>dsfsdafsdagdsagsdfdsfgdsagdsa_dsffdgdsfgdfdasfdsad</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321395</td>
+                <td>dsfsdafsdagdsagsdfdsfgdsagdsa_dsffdgdsfgdfdasfdsad</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321396</td>
+                <td>李uuu六</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321397</td>
+                <td>李uu3443u六</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321398</td>
+                <td>jiangzhe5</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321399</td>
+                <td>李晨</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321400</td>
+                <td>李娜</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321401</td>
+                <td>娜娜</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321402</td>
+                <td>张四</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321403</td>
+                <td>sgdsgsdg</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321404</td>
+                <td>afasfasf</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321405</td>
+                <td>wet24</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321406</td>
+                <td>456456</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321407</td>
+                <td>131312</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321408</td>
+                <td>张三丰</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321411</td>
+                <td>66666g</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321409</td>
+                <td>jiangzhe789</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321412</td>
+                <td>daasw2</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321413</td>
+                <td>222ddd1</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321414</td>
+                <td>王五</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321415</td>
+                <td>王刘</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321416</td>
+                <td>李六</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321417</td>
+                <td>李雷</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321418</td>
+                <td>jiangzhe885</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321419</td>
+                <td>jiangzhe66</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321420</td>
+                <td>jiangzhe86</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321421</td>
+                <td>jiangzhe888</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321422</td>
+                <td>jiangzhe6668</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321423</td>
+                <td>jiangzhe6665</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321424</td>
+                <td>马骑</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321425</td>
+                <td>马六</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321426</td>
+                <td>马蓉</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321427</td>
+                <td>李dsdf六</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321428</td>
+                <td>马良</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321429</td>
+                <td>李五</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321430</td>
+                <td>马超</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321431</td>
+                <td>马腾</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321432</td>
+                <td>范冰冰1</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321433</td>
+                <td>冰冰</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321434</td>
+                <td>冰冰2</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321435</td>
+                <td>冰冰3</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321436</td>
+                <td>冰冰4</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321437</td>
+                <td>冰冰5</td>
+                <td>None</td>
+                </tr>
+                <tr>
+                <td>123321438</td>
+                <td>冰冰6</td>
+                <td>None</td>
+                </tr>
+                </tbody>
+            </body></html>
+                    
+[2020-03-10 15:30:13] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:30:13] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-10 15:30:26] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:30:26] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-10 15:30:26] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:30:26] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/updateUser/?token=**** HTTP/1.1" 200 63
+[2020-03-10 15:30:26] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_updata
+[2020-03-10 15:30:26] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/updateUser/?token=****
+[2020-03-10 15:30:26] INFO [log_case_info: case_log.py, 20] 参数为：{
+    "name": "李六",
+    "password": "123456"
+}
+[2020-03-10 15:30:26] INFO [log_case_info: case_log.py, 21] 预期结果：{"code": "100000", "data": {"name": "\u674e\u516d", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "\u6210\u529f"}
+[2020-03-10 15:30:26] INFO [log_case_info: case_log.py, 22] 结果：{"code": "100007", "data": null, "msg": "鉴权失败"}
+[2020-03-10 15:33:01] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:33:01] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-10 15:33:01] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:33:01] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/updateUser/?token=**** HTTP/1.1" 200 63
+[2020-03-10 15:33:01] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_updata
+[2020-03-10 15:33:01] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/updateUser/?token=****
+[2020-03-10 15:33:01] INFO [log_case_info: case_log.py, 20] 参数为：{
+    "token": "b3f80a264a3d11e8956b54ee75704366",
+    "name": "李六",
+    "password": "123456"
+}
+[2020-03-10 15:33:01] INFO [log_case_info: case_log.py, 21] 预期结果：{"code": "100000", "data": {"name": "\u674e\u516d", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "\u6210\u529f"}
+[2020-03-10 15:33:01] INFO [log_case_info: case_log.py, 22] 结果：{"code": "100007", "data": null, "msg": "鉴权失败"}
+[2020-03-10 15:33:49] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:33:49] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-10 15:33:49] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:33:49] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/updateUser/?token=**** HTTP/1.1" 200 63
+[2020-03-10 15:33:49] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_updata
+[2020-03-10 15:33:49] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/updateUser/?token=****
+[2020-03-10 15:33:49] INFO [log_case_info: case_log.py, 20] 参数为：{
+    "token": "710e46e062a111ea87c400163e06e52c",
+    "name": "李六",
+    "password": "123456"
+}
+[2020-03-10 15:33:49] INFO [log_case_info: case_log.py, 21] 预期结果：{"code": "100000", "data": {"name": "\u674e\u516d", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "\u6210\u529f"}
+[2020-03-10 15:33:49] INFO [log_case_info: case_log.py, 22] 结果：{"code": "100007", "data": null, "msg": "鉴权失败"}
+[2020-03-10 15:35:07] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:35:07] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-10 15:35:07] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:35:07] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/updateUser HTTP/1.1" 301 301
+[2020-03-10 15:35:07] DEBUG [_get_conn: connectionpool.py, 266] Resetting dropped connection: 115.28.108.130
+[2020-03-10 15:35:08] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "GET /api/user/updateUser/ HTTP/1.1" 405 178
+[2020-03-10 15:36:35] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:36:35] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-10 15:36:35] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:36:35] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c HTTP/1.1" 200 115
+[2020-03-10 15:36:35] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_updata
+[2020-03-10 15:36:35] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c
+[2020-03-10 15:36:35] INFO [log_case_info: case_log.py, 20] 参数为：{
+    "name": "李六",
+    "password": "123456"
+}
+[2020-03-10 15:36:35] INFO [log_case_info: case_log.py, 21] 预期结果：{"code": "100000", "data": {"name": "\u674e\u516d", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "\u6210\u529f"}
+[2020-03-10 15:36:35] INFO [log_case_info: case_log.py, 22] 结果：{"code": "100000", "data": {"name": "李六", "passwod": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "成功"}
+[2020-03-10 15:38:58] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:38:58] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-10 15:38:58] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:38:59] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c HTTP/1.1" 200 115
+[2020-03-10 15:38:59] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_updata
+[2020-03-10 15:38:59] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c
+[2020-03-10 15:38:59] INFO [log_case_info: case_log.py, 20] 参数为：{
+    "name": "李六",
+    "password": "123456"
+}
+[2020-03-10 15:38:59] INFO [log_case_info: case_log.py, 21] 预期结果：{"code": "100000", "data": {"name": "\u674e\u516d", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "\u6210\u529f"}
+[2020-03-10 15:38:59] INFO [log_case_info: case_log.py, 22] 结果：{"code": "100000", "data": {"name": "李六", "passwod": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "成功"}
+[2020-03-10 15:39:27] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:39:27] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-10 15:39:27] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:39:27] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c HTTP/1.1" 200 115
+[2020-03-10 15:39:27] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_updata
+[2020-03-10 15:39:27] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c
+[2020-03-10 15:39:27] INFO [log_case_info: case_log.py, 20] 参数为：{
+    "name": "李六",
+    "password": "123457"
+}
+[2020-03-10 15:39:27] INFO [log_case_info: case_log.py, 21] 预期结果：{"code": "100000", "data": {"name": "\u674e\u516d", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "\u6210\u529f"}
+[2020-03-10 15:39:27] INFO [log_case_info: case_log.py, 22] 结果：{"code": "100000", "data": {"name": "李六", "passwod": "f1887d3f9e6ee7a32fe5e76f4ab80d63"}, "msg": "成功"}
+[2020-03-10 15:42:25] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:42:26] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-10 15:42:26] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:42:26] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c HTTP/1.1" 200 115
+[2020-03-10 15:42:26] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_updata
+[2020-03-10 15:42:26] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c
+[2020-03-10 15:42:26] INFO [log_case_info: case_log.py, 20] 参数为：{
+    "name": "李六",
+    "password": "123457"
+}
+[2020-03-10 15:42:26] INFO [log_case_info: case_log.py, 21] 预期结果：{"code": "100000", "data": {"name": "\u674e\u516d", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "\u6210\u529f"}
+[2020-03-10 15:42:26] INFO [log_case_info: case_log.py, 22] 结果：{"code": "100000", "data": {"name": "李六", "passwod": "f1887d3f9e6ee7a32fe5e76f4ab80d63"}, "msg": "成功"}
+[2020-03-10 15:45:20] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:45:20] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-10 15:45:21] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:45:21] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c HTTP/1.1" 200 115
+[2020-03-10 15:45:21] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_updata
+[2020-03-10 15:45:21] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c
+[2020-03-10 15:45:21] INFO [log_case_info: case_log.py, 20] 参数为：{
+    "name": "王五",
+    "password": "123457"
+}
+[2020-03-10 15:45:21] INFO [log_case_info: case_log.py, 21] 预期结果：{"code": "100000", "data": {"name": "\u738b\u4e94", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "\u6210\u529f"}
+[2020-03-10 15:45:21] INFO [log_case_info: case_log.py, 22] 结果：{"code": "100000", "data": {"name": "王五", "passwod": "f1887d3f9e6ee7a32fe5e76f4ab80d63"}, "msg": "成功"}
+[2020-03-10 15:47:38] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:47:38] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/login/ HTTP/1.1" 200 21
+[2020-03-10 15:47:38] DEBUG [_new_conn: connectionpool.py, 225] Starting new HTTP connection (1): 115.28.108.130:5000
+[2020-03-10 15:47:38] DEBUG [_make_request: connectionpool.py, 437] http://115.28.108.130:5000 "POST /api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c HTTP/1.1" 200 115
+[2020-03-10 15:47:38] INFO [log_case_info: case_log.py, 18] 测试用例：test_user_updata
+[2020-03-10 15:47:38] INFO [log_case_info: case_log.py, 19] url：http://115.28.108.130:5000/api/user/updateUser/?token=710e46e062a111ea87c400163e06e52c
+[2020-03-10 15:47:38] INFO [log_case_info: case_log.py, 20] 参数为：{
+    "name": "王五",
+    "password": "123457"
+}
+[2020-03-10 15:47:38] INFO [log_case_info: case_log.py, 21] 预期结果：{"code": "100000", "data": {"name": "\u738b\u4e94", "password": "e10adc3949ba59abbe56e057f20f883e"}, "msg": "\u6210\u529f"}
+[2020-03-10 15:47:38] INFO [log_case_info: case_log.py, 22] 结果：{"code": "100000", "data": {"name": "王五", "passwod": "f1887d3f9e6ee7a32fe5e76f4ab80d63"}, "msg": "成功"}
